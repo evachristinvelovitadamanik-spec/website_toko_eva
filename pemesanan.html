@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VeloShop — Pemesanan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html"><span class="mark">V</span> VeloShop</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="produk.html">Produk</a></li>
+      <li><a href="pemesanan.html" class="active">Pemesanan</a></li>
+    </ul>
+  </header>
+
+  <main class="container">
+    <h2 style="color:#072b5b;margin-bottom:12px">Form Pemesanan</h2>
+
+    <div class="form-wrap">
+      <form id="orderForm" onsubmit="return submitOrder(event)">
+        <div>
+          <label for="nama">Nama Lengkap</label>
+          <input id="nama" type="text" placeholder="Nama penerima" required>
+        </div>
+
+        <div>
+          <label for="alamat">Alamat Lengkap</label>
+          <textarea id="alamat" placeholder="Jalan, kecamatan, kota" required></textarea>
+        </div>
+
+        <div style="display:flex;gap:12px">
+          <div style="flex:1">
+            <label for="produk">Produk</label>
+            <input id="produk" type="text" placeholder="Pilih produk dari katalog" required readonly>
+          </div>
+          <div style="width:160px">
+            <label for="harga">Harga (Rp)</label>
+            <input id="harga" type="number" placeholder="0" required readonly>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;align-items:center">
+          <div style="flex:1">
+            <label for="jumlah">Jumlah</label>
+            <input id="jumlah" type="number" min="1" value="1" required oninput="recalcTotal()">
+          </div>
+          <div style="width:200px">
+            <label>&nbsp;</label>
+            <div style="font-weight:700;padding:12px;border-radius:8px;background:linear-gradient(90deg,#fff,#f7fbff);text-align:center;color:#123a66" id="totalLabel">Total: Rp 0</div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Kirim Pesanan</button>
+          <button type="button" class="btn secondary" onclick="clearSelectedProduct()">Batal</button>
+        </div>
+      </form>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pesanan Berhasil — VeloShop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html"><span class="mark">V</span> VeloShop</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="produk.html">Produk</a></li>
+      <li><a href="pemesanan.html">Pemesanan</a></li>
+    </ul>
+  </header>
+
+  <main class="container" style="max-width:760px">
+    <div class="success-box" id="successBox">
+      <div class="success-icon">✓</div>
+      <h2 style="color:#06407a">Pesanan Berhasil Dikirim</h2>
+      <p style="color:#0b3b66">Terima kasih! Pesananmu sudah kami terima. Berikut ringkasan pesanan:</p>
+
+      <div class="summary" id="orderSummary" aria-live="polite" style="margin-top:18px"></div>
+
+      <div style="margin-top:18px;display:flex;gap:12px;justify-content:center">
+        <a class="btn" href="index.html">Kembali ke Beranda</a>
+        <a class="btn secondary" href="produk.html">Lihat Produk Lain</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
